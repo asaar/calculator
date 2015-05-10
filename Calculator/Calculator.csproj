@@ -37,16 +37,19 @@
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Core.Portable">
-      <HintPath>..\packages\Core.Common.0.1.107\lib\net45\Core.Portable.dll</HintPath>
+      <HintPath>..\packages\Core.Common.0.1.108\lib\net45\Core.Portable.dll</HintPath>
     </Reference>
     <Reference Include="Core.Platform">
-      <HintPath>..\packages\Core.Common.0.1.107\lib\net45\Core.Platform.dll</HintPath>
+      <HintPath>..\packages\Core.Common.0.1.108\lib\net45\Core.Platform.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Calculator.cs" />
+    <Compile Include="Parser.cs" />
+    <Compile Include="Operator.cs" />
+    <Compile Include="Operand.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
