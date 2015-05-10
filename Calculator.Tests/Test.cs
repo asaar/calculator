@@ -15,7 +15,7 @@ namespace Calculator.Tests
 		}
 
 		[Test ()]
-		public void TestCase ()
+		public void TestNumeric ()
 		{
 			Assert.AreEqual (5, (calc.Eval (exprString: "2+3") as NumericOperand)?.Value);
 			Assert.AreEqual (10, (calc.Eval (exprString: "2*3+4") as NumericOperand)?.Value);
@@ -33,6 +33,16 @@ namespace Calculator.Tests
 			Assert.AreEqual (7, (calc.Eval (exprString: "2^3 - 3 + 1 + 3 * 10 / 5 - 5") as NumericOperand)?.Value);
 
 			Assert.AreEqual (7, (calc.Eval (exprString: "2^3 - 3 + 1 + 3 * ((4+4*4)/2) / 5 + -5") as NumericOperand)?.Value);
+		}
+
+		[Test ()]
+		public void TestBoolean ()
+		{
+			Assert.AreEqual (true, (calc.Eval (exprString: "2^3 - 3 + 1 + 3 * ((4+4*4)/2) / 5 + -5 < 8") as BooleanOperand)?.Value);
+			Assert.AreEqual (true, (calc.Eval (exprString: "2^3 - 3 + 1 + 3 * ((4+4*4)/2) / 5 + -5 <= 7") as BooleanOperand)?.Value);
+			Assert.AreEqual (true, (calc.Eval (exprString: "2^3 - 3 + 1 + 3 * ((4+4*4)/2) / 5 + -5 >= 7") as BooleanOperand)?.Value);
+			Assert.AreEqual (true, (calc.Eval (exprString: "2^3 - 3 + 1 + 3 * ((4+4*4)/2) / 5 + -5 > 6") as BooleanOperand)?.Value);
+			Assert.AreEqual (false, (calc.Eval (exprString: "2^3 - 3 + 1 + 3 * ((4+4*4)/2) / 5 + -5 > 8") as BooleanOperand)?.Value);
 		}
 
 		[TestFixtureTearDown ()]

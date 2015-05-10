@@ -50,6 +50,12 @@ namespace Calculator
 				new BinaryOperator (operatorChar: "+", implNumeric: (l, r) => l.Add (r)),
 			},
 			new [] {
+				new BinaryOperator (operatorChar: "<", implNumeric: (l, r) => l.LessThan (r)),
+				new BinaryOperator (operatorChar: ">", implNumeric: (l, r) => r.LessThan (l)),
+				new BinaryOperator (operatorChar: "<=", implNumeric: (l, r) => l.LessThan (r).Or (l.Equality (r))),
+				new BinaryOperator (operatorChar: ">=", implNumeric: (l, r) => r.LessThan (l).Or (r.Equality (l))),
+			},
+			new [] {
 				new BinaryOperator (operatorChar: "==", implBoolean: (l, r) => l.Equality (r)),
 				new BinaryOperator (operatorChar: "!=", implBoolean: (l, r) => l.Equality (r).Not),
 			},
@@ -79,6 +85,9 @@ namespace Calculator
 			['=' ] = TokenType.OPERATOR,
 			['&' ] = TokenType.OPERATOR,
 			['|' ] = TokenType.OPERATOR,
+			['<' ] = TokenType.OPERATOR,
+			['>' ] = TokenType.OPERATOR,
+			['=' ] = TokenType.OPERATOR,
 			['(' ] = TokenType.OPENING_BRACKET,
 			[')' ] = TokenType.CLOSING_BRACKET,
 		};

@@ -65,6 +65,11 @@ namespace Calculator
 			return other != null && Math.Abs (other.Value - Value) < 0.00001 ? Operand.True : Operand.False;
 		}
 
+		public BooleanOperand LessThan (NumericOperand other)
+		{
+			return other != null && Value < other.Value ? Operand.True : Operand.False;
+		}
+
 		public override string ToString ()
 		{
 			return "NumericOperand(" + Value + ")";
