@@ -37,10 +37,10 @@
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Core.Portable">
-      <HintPath>..\packages\Core.Common.0.1.108\lib\net45\Core.Portable.dll</HintPath>
+      <HintPath>..\packages\Core.Common.0.1.111\lib\net45\Core.Portable.dll</HintPath>
     </Reference>
     <Reference Include="Core.Platform">
-      <HintPath>..\packages\Core.Common.0.1.108\lib\net45\Core.Platform.dll</HintPath>
+      <HintPath>..\packages\Core.Common.0.1.111\lib\net45\Core.Platform.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
