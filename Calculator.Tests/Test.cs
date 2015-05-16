@@ -11,7 +11,7 @@ namespace Calculator.Tests
 		[TestFixtureSetUp ()]
 		public void Setup ()
 		{
-			Core.Common.Logging.Enable ();
+			Core.IO.Logging.Enable ();
 		}
 
 		[Test ()]
@@ -48,7 +48,7 @@ namespace Calculator.Tests
 		[TestFixtureTearDown ()]
 		public void TearDown ()
 		{
-			Core.Common.Logging.Finish ();
+			Core.IO.Logging.Finish ();
 		}
 	}
 }

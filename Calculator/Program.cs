@@ -6,7 +6,7 @@ namespace Calculator
 	{
 		public static void Main (string[] args)
 		{
-			Core.Common.Logging.Enable ();
+			Core.IO.Logging.Enable ();
 
 			Console.WriteLine ("Hello World!");
 			Calculator calc = new Calculator ();
@@ -22,7 +22,7 @@ namespace Calculator
 			//calc.Eval (exprString: "10  +(-2*3*(-1))");
 			// "2^3 - 3 + 1 + 3 * ((4+4*4)/2) / 5 + -5"
 
-			Core.Common.Logging.Finish ();
+			Core.IO.Logging.Finish ();
 		}
 	}
 }
