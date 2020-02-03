@@ -91,6 +91,10 @@ namespace Calculator
 			['(' ] = TokenType.OPENING_BRACKET,
 			[')' ] = TokenType.CLOSING_BRACKET,
 		};
+		public static void dummyMethod (string defStr)
+		{
+		    defStr = "default";
+		}
 	}
 }
 
